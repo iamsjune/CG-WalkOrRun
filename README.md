@@ -1,4 +1,4 @@
-# Computer Graphics
+# Raining Simulation
 
 Walking or Running in the rain
 Which is less wet?
