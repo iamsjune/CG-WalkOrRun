@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=utf-8>
+	<title>Rain Simulator</title>
+	<style type="text/css">
+		body {
+      		background-size: 60%, 60%;
+			background-color: beige;
+    	}
+
+		#canvas{
+			float: left;
+		}
+
+		#menu{
+			float: left;
+			margin: 20px 0px 0px 20px;
+			font-size: xx-large;
+		}
+
+		#runSpeed {
+			font-size: 35px;
+      		background-color: #43d4d9;
+			width: 200px;
+      		border: 0px;
+			border-radius: 10px;
+      		color: #447777;
+      		cursor: pointer;
+      		display: block;
+      		margin: 10px 0px 10px 0px;
+    	}
+
+		#rainDensity {
+			font-size: 35px;
+      		background-color: #43d4d9;
+			width: 200px;
+      		border: 0px;
+			border-radius: 10px;
+      		color: #447777;
+      		cursor: pointer;
+      		display: block;
+      		margin: 10px 0px 10px 0px;
+    	}
+
+		#rainDropRadius {
+			font-size: 35px;
+      		background-color: #43d4d9;
+			width: 200px;
+      		border: 0px;
+			border-radius: 10px;
+      		color: #447777;
+      		cursor: pointer;
+      		display: block;
+      		margin: 10px 0px 10px 0px;
+    	}
+
+		#btnReset {
+			font-size: 35px;
+      		background-color: #ebadd1;
+			width: 200px;
+      		border: 0px;
+			border-radius: 10px;
+      		color: #447777;
+      		padding: 20px 30px;
+			text-align: center;
+      		cursor: pointer;
+      		display: block;
+      		margin: 30px 0px 230px 0px;
+    	}
+
+		textarea {
+			width: 400px;
+        	height: 200px;
+			font-size: xx-large;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Three js -->
+	<script src="../../three/three.js"></script>
+	<!-- OrbitControls allow the camera to orbit around a target -->
+	<script src="../../three/OrbitControls.js"></script>
+	<!-- WebGL Detector -->
+	<script src="../../three/Detector.js"></script>
+	<!-- Material Loader https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/MTLLoader.js -->
+	<script src="../../three/MTLLoader.js"></script>
+	<!-- Object Loader https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/OBJLoader.js -->
+	<script src="../../three/OBJLoader.js"></script>
+	<!-- Main Javascript -->
+	<script type="text/javascript" src="../js/RainSimulator.js"></script>
+
+	<div>
+		<div id="canvas">
+		</div>
+
+		<div id="menu">
+			<label for="runSpeed">달리기 속력:
+				<select id="runSpeed">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option selected="" value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</label>
+			<label for="rainDensity">비 밀도:
+				<select id="rainDensity">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option selected="" value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</label>
+			<label for="rainDropRadius">빗방울 크기:
+				<select id="rainDropRadius">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option selected="" value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+			</label>
+			<button id="btnReset" type="start">설정!</button>
+			<textarea id="rainText" placeholder="Read Only" readonly>...</textarea>
+		</div>
+	</div>
+</body>
+
+</html>
